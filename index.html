@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Music</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">🎵 My Music</div>
+  <button id="themeBtn">☀️</button>
+</header>
+
+<main>
+  <h1>Music for you</h1>
+
+  <div class="searchBox">
+    🔎
+    <input id="search" type="text" placeholder="Search music...">
+  </div>
+
+  <div class="buttons">
+    <button onclick="document.getElementById('fileInput').click()">
+      ＋ Add Music
+    </button>
+    <input id="fileInput" type="file" accept="audio/*" multiple hidden>
+  </div>
+
+  <h2>Your Music</h2>
+  <div id="songList"></div>
+</main>
+
+<div class="player">
+  <div>
+    <strong id="currentSong">No song selected</strong>
+  </div>
+
+  <div class="controls">
+    <button onclick="previousSong()">⏮</button>
+    <button class="play" onclick="togglePlay()">▶</button>
+    <button onclick="nextSong()">⏭</button>
+  </div>
+
+  <input id="progress" type="range" value="0" min="0" max="100">
+
+  <audio id="audio"></audio>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
