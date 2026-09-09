@@ -7,20 +7,20 @@ body {
   font-family: Arial, sans-serif;
   background: #f5f5f5;
   color: #111;
-  padding-bottom: 150px;
+  transition: 0.3s;
 }
 
 header {
-  background: #111;
-  color: white;
-  padding: 18px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 18px;
+  background: #111;
+  color: white;
 }
 
 .logo {
-  font-size: 24px;
+  font-size: 23px;
   font-weight: bold;
 }
 
@@ -28,7 +28,7 @@ header button {
   border: 0;
   border-radius: 50%;
   padding: 10px;
-  cursor: pointer;
+  font-size: 17px;
 }
 
 main {
@@ -38,86 +38,49 @@ main {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 32px;
+  margin-bottom: 5px;
 }
 
-h2 {
-  margin-top: 30px;
+.subtitle {
+  color: #777;
 }
 
-.searchBox {
+.search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   background: white;
   padding: 14px;
+  margin: 25px 0;
   border-radius: 14px;
-  display: flex;
-  gap: 10px;
-  box-shadow: 0 2px 10px #ddd;
+  box-shadow: 0 3px 12px #ddd;
 }
 
-.searchBox input {
+.search input {
   width: 100%;
   border: 0;
   outline: none;
   font-size: 16px;
 }
 
-.buttons button {
-  margin-top: 15px;
-  padding: 12px 18px;
-  border: 0;
-  border-radius: 10px;
-  background: #111;
-  color: white;
-  font-size: 15px;
+section {
+  background: white;
+  padding: 15px;
+  border-radius: 18px;
+  box-shadow: 0 3px 12px #ddd;
 }
 
-.song {
-  background: white;
-  margin: 10px 0;
-  padding: 15px;
+iframe {
   border-radius: 12px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
-.song button {
-  border: 0;
-  border-radius: 50%;
-  padding: 10px;
-  cursor: pointer;
-}
-
-.player {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: white;
-  padding: 15px;
-  box-shadow: 0 -3px 15px #ccc;
+footer {
   text-align: center;
-}
-
-.controls {
-  margin: 10px;
-}
-
-.controls button {
-  border: 0;
-  margin: 0 8px;
-  padding: 12px;
-  border-radius: 50%;
-  font-size: 18px;
-}
-
-.controls .play {
-  background: #111;
-  color: white;
-}
-
-#progress {
-  width: 90%;
+  padding: 25px;
+  color: #777;
+  display: flex;
+  justify-content: space-around;
 }
 
 .dark {
@@ -125,9 +88,12 @@ h2 {
   color: white;
 }
 
-.dark .searchBox,
-.dark .song,
-.dark .player {
+.dark .search,
+.dark section {
   background: #1e1e1e;
-  color: white;
+}
+
+.dark .subtitle,
+.dark footer {
+  color: #aaa;
 }
