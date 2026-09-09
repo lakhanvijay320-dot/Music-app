@@ -3,51 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Music</title>
+  <title>Y+ Music</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
-  <div class="logo">🎵 My Music</div>
-  <button id="themeBtn">☀️</button>
+  <div class="logo">🎵 Y+ Music</div>
+  <button onclick="toggleDark()">🌙</button>
 </header>
 
 <main>
   <h1>Music for you</h1>
+  <p class="subtitle">Listen to your favorite music</p>
 
-  <div class="searchBox">
+  <div class="search">
     🔎
-    <input id="search" type="text" placeholder="Search music...">
+    <input type="text" placeholder="Search music...">
   </div>
 
-  <div class="buttons">
-    <button onclick="document.getElementById('fileInput').click()">
-      ＋ Add Music
-    </button>
-    <input id="fileInput" type="file" accept="audio/*" multiple hidden>
-  </div>
+  <section>
+    <h2>Spotify Playlist</h2>
 
-  <h2>Your Music</h2>
-  <div id="songList"></div>
+    <iframe
+      title="Spotify Playlist"
+      src="https://open.spotify.com/embed/playlist/1GeZsDE8uvGtMZr23QU3HX?utm_source=generator&theme=0"
+      width="100%"
+      height="380"
+      frameborder="0"
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy">
+    </iframe>
+  </section>
 </main>
 
-<div class="player">
-  <div>
-    <strong id="currentSong">No song selected</strong>
-  </div>
-
-  <div class="controls">
-    <button onclick="previousSong()">⏮</button>
-    <button class="play" onclick="togglePlay()">▶</button>
-    <button onclick="nextSong()">⏭</button>
-  </div>
-
-  <input id="progress" type="range" value="0" min="0" max="100">
-
-  <audio id="audio"></audio>
-</div>
+<footer>
+  <span>🎵 Y+ Music</span>
+  <span>No ads in this app</span>
+</footer>
 
 <script src="app.js"></script>
+
 </body>
 </html>
