@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,41 +9,64 @@
 
 <body>
 
-<header>
-  <div class="logo">🎵 Y+ Music</div>
-  <button onclick="toggleDark()">🌙</button>
-</header>
+  <header>
+    <div class="brand">🎵 Y+ Music</div>
+    <button id="themeBtn">🌙</button>
+  </header>
 
-<main>
-  <h1>Music for you</h1>
-  <p class="subtitle">Listen to your favorite music</p>
+  <main>
 
-  <div class="search">
-    🔎
-    <input type="text" placeholder="Search music...">
-  </div>
+    <h1>Good music, good mood 🎧</h1>
+    <p class="subtitle">Your music, your way.</p>
 
-  <section>
-    <h2>Spotify Playlist</h2>
+    <div class="searchBox">
+      <span>🔎</span>
+      <input id="searchInput" type="text" placeholder="Search in this playlist...">
+    </div>
 
-    <iframe
-      title="Spotify Playlist"
-      src="https://open.spotify.com/embed/playlist/1GeZsDE8uvGtMZr23QU3HX?utm_source=generator&theme=0"
-      width="100%"
-      height="380"
-      frameborder="0"
-      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-      loading="lazy">
-    </iframe>
-  </section>
-</main>
+    <section class="card">
+      <div class="sectionTitle">
+        <div>
+          <h2>My Playlist</h2>
+          <p>Spotify playlist</p>
+        </div>
+        <span>🎶</span>
+      </div>
 
-<footer>
-  <span>🎵 Y+ Music</span>
-  <span>No ads in this app</span>
-</footer>
+      <iframe
+        src="https://open.spotify.com/embed/playlist/67iR9mSL69o0SmQUu1p4HL?utm_source=generator&theme=0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+    </section>
 
-<script src="app.js"></script>
+    <section class="features">
+      <div class="feature">
+        <span>🎵</span>
+        <b>Online Music</b>
+        <small>Spotify playlist</small>
+      </div>
+
+      <div class="feature">
+        <span>❤️</span>
+        <b>Favorites</b>
+        <small>Save your favorites</small>
+      </div>
+
+      <div class="feature">
+        <span>📱</span>
+        <b>Mobile Friendly</b>
+        <small>Made for phone</small>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Y+ Music • Powered by Spotify</p>
+  </footer>
+
+  <script src="app.js"></script>
 
 </body>
 </html>
