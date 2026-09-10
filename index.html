@@ -1,72 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Y+ Music</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Y+ Music</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎵</text></svg>">
 </head>
-
-<body>
-
-  <header>
-    <div class="brand">🎵 Y+ Music</div>
-    <button id="themeBtn">🌙</button>
-  </header>
-
-  <main>
-
-    <h1>Good music, good mood 🎧</h1>
-    <p class="subtitle">Your music, your way.</p>
-
-    <div class="searchBox">
-      <span>🔎</span>
-      <input id="searchInput" type="text" placeholder="Search in this playlist...">
-    </div>
-
-    <section class="card">
-      <div class="sectionTitle">
-        <div>
-          <h2>My Playlist</h2>
-          <p>Spotify playlist</p>
+<body class="dark-theme">
+    <header class="app-header">
+        <button class="icon-btn" id="home-btn" aria-label="Home">
+            <i class="fa-solid fa-house"></i>
+        </button>
+        <h1 class="app-title">Y+ Music</h1>
+        <div class="header-controls">
+            <button class="icon-btn" id="theme-toggle" aria-label="Toggle Theme">
+                <i class="fa-solid fa-sun"></i>
+            </button>
+            <button class="icon-btn" id="settings-btn" aria-label="Settings">
+                <i class="fa-solid fa-gear"></i>
+            </button>
         </div>
-        <span>🎶</span>
-      </div>
+    </header>
 
-      <iframe
-        src="https://open.spotify.com/embed/playlist/67iR9mSL69o0SmQUu1p4HL?utm_source=generator&theme=0"
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy">
-      </iframe>
-    </section>
+    <main class="main-content">
+        <div class="player-container">
+            <iframe 
+                title="Spotify Web Player" 
+                src="https://open.spotify.com/embed/playlist/67iR9mSL69o0SmQUu1p4HL?utm_source=generator&theme=0" 
+                width="100%" 
+                height="100%" 
+                frameborder="0" 
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                loading="lazy">
+            </iframe>
+        </div>
+    </main>
 
-    <section class="features">
-      <div class="feature">
-        <span>🎵</span>
-        <b>Online Music</b>
-        <small>Spotify playlist</small>
-      </div>
-
-      <div class="feature">
-        <span>❤️</span>
-        <b>Favorites</b>
-        <small>Save your favorites</small>
-      </div>
-
-      <div class="feature">
-        <span>📱</span>
-        <b>Mobile Friendly</b>
-        <small>Made for phone</small>
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <p>Y+ Music • Powered by Spotify</p>
-  </footer>
-
-  <script src="app.js"></script>
-
+    <script src="app.js"></script>
 </body>
 </html>
