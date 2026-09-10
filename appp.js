@@ -1,8 +1,19 @@
-// My AI Music App
+const themeButton = document.getElementById("themeBtn");
 
-function toggleDark() {
-  document.body.classList.toggle("dark");
-}
+themeButton.addEventListener("click", function () {
+  document.body.classList.toggle("light");
 
-// Welcome message
-console.log("My AI Music App started!");
+  if (document.body.classList.contains("light")) {
+    themeButton.textContent = "☀️";
+  } else {
+    themeButton.textContent = "🌙";
+  }
+});
+
+const searchInput = document.getElementById("searchInput");
+
+searchInput.addEventListener("input", function () {
+  console.log("Search:", searchInput.value);
+});
+
+console.log("Y+ Music started successfully!");
